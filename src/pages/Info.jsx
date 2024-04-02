@@ -1,12 +1,9 @@
 import { useState, useEffect } from "react";
 
-// Import du package Axios
 import axios from "axios";
-
-// Import Loader
 import Loader from "../components/Loader";
 
-const Episodes = () => {
+const Info = () => {
   const [data, setData] = useState();
   const [isLoading, setIsLoading] = useState(true);
 
@@ -14,7 +11,7 @@ const Episodes = () => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          "https://api.sampleapis.com/futurama/episodes"
+          "https://api.sampleapis.com/futurama/info"
         );
         setData(response.data);
         console.log(response.data);
@@ -29,12 +26,18 @@ const Episodes = () => {
     <Loader />
   ) : (
     <>
-      <h1>Episodes</h1>
-      <div className="card">
-        {data.map((episode) => {
+      <h2>Synopsis</h2>
+      <div>
+        {data.map((infos) => {
+          console.log(infos);
           return (
-            <div className="card-details" key={episode.title}>
-              <h2>{episode.title}</h2>
+            <div key={infos.id}>
+              <p>{infos.synopsis}</p>
+              <h2>Creators name :</h2>
+              {infos.creators.map((creators) => {
+                return <p>{creators.name}</p>;
+              })}
+              <p>Production : {infos.yearsAired}</p>
             </div>
           );
         })}
@@ -43,4 +46,4 @@ const Episodes = () => {
   );
 };
 
-export default Episodes;
+export default Info;

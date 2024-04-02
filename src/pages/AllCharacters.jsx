@@ -3,6 +3,8 @@ import { useState, useEffect } from "react";
 // Import du package Axios
 import axios from "axios";
 
+import Loader from "../components/Loader";
+
 const AllCharacters = () => {
   const [data, setData] = useState();
   const [isLoading, setIsLoading] = useState(true);
@@ -23,7 +25,7 @@ const AllCharacters = () => {
     fetchData();
   }, []);
   return isLoading ? (
-    <p>Loading in progress...</p>
+    <Loader />
   ) : (
     <>
       <div className="card">

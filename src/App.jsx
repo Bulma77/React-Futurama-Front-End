@@ -1,10 +1,11 @@
 // Import router
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import "./App.css";
 
 // Pages
 import Home from "./pages/Home";
+import Info from "./pages/Info";
 import AllCharacters from "./pages/AllCharacters";
 import Episodes from "./pages/Episodes";
 
@@ -17,7 +18,8 @@ function App() {
       <Router>
         <Header />
         <Routes>
-          <Route path="/info" element={<Home />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/info" element={<Info />} />
           <Route path="/characters" element={<AllCharacters />} />
           <Route path="/episodes" element={<Episodes />} />
         </Routes>
