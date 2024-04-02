@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 
 import Loader from "../components/Loader";
+import Card from "../components/Card";
 
 const AllCharacters = () => {
   const [data, setData] = useState();
@@ -28,7 +29,13 @@ const AllCharacters = () => {
     <Loader />
   ) : (
     <>
-      <div className="card">
+      <div className="card-bloc">
+        {data.map((characters) => {
+          return <Card key={characters.id} data={characters} />;
+        })}
+      </div>
+
+      {/* <div className="card">
         {data.map((characters) => {
           console.log(characters.name.first);
           return (
@@ -38,7 +45,7 @@ const AllCharacters = () => {
             </div>
           );
         })}
-      </div>
+      </div> */}
     </>
   );
 };
