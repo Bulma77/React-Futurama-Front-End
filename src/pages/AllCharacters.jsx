@@ -34,18 +34,6 @@ const AllCharacters = () => {
           return <Card key={characters.id} data={characters} />;
         })}
       </div>
-
-      {/* <div className="card">
-        {data.map((characters) => {
-          console.log(characters.name.first);
-          return (
-            <div className="card-details" key={characters.id}>
-              <p>{characters.name.first}</p>
-              <img src={characters.images.main} alt="" />
-            </div>
-          );
-        })}
-      </div> */}
     </>
   );
 };
