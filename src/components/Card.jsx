@@ -1,8 +1,14 @@
 import "../assets/Styles/card.css";
+import Person from "../components/Person";
 
-const Cards = ({ data }) => {
+const Cards = ({ data, setSelectedCharacter }) => {
   return (
-    <div className="card">
+    <div
+      className="card"
+      onClick={() => {
+        setSelectedCharacter(character.id);
+      }}
+    >
       <div className="card-front">
         <img className="card-image" src={data.images.main} alt="" />
         <p>{data.name.first + " " + data.name.middle + " " + data.name.last}</p>
@@ -20,3 +26,22 @@ const Cards = ({ data }) => {
   );
 };
 export default Cards;
+
+// const Cards = ({ data, selectedCharacter, setSelectedCharacter }) => {
+//   return (
+//     <div>
+//       <p
+//         className="button"
+//         style={{
+//           textDecoration: data.id === selectedCharacter ? "underline" : null,
+//         }}
+//         onClick={() => {
+//           setSelectedCharacter(data.id);
+//         }}
+//       >
+//         {data.name.first}
+//       </p>
+//     </div>
+//   );
+// };
+// export default Cards;

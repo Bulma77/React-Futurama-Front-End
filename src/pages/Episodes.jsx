@@ -30,11 +30,14 @@ const Episodes = () => {
   ) : (
     <>
       <h1>Episodes</h1>
-      <div className="card">
+      <div>
         {data.map((episode) => {
           return (
-            <div className="card-details" key={episode.title}>
-              <h2>{episode.title}</h2>
+            <div className="episodes" key={episode.title}>
+              <h2>Title : {episode.title}</h2>
+              <p>Writers : {episode.writers}</p>
+              <p>Original Air Date : {episode.originalAirDate}</p>
+              <p>Description : {episode.desc}</p>
             </div>
           );
         })}

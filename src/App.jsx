@@ -11,6 +11,7 @@ import Episodes from "./pages/Episodes";
 
 // Components
 import Header from "./components/Header";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           <Route path="/characters" element={<AllCharacters />} />
           <Route path="/episodes" element={<Episodes />} />
         </Routes>
+        <Footer />
       </Router>
     </>
   );

@@ -10,6 +10,8 @@ const AllCharacters = () => {
   const [data, setData] = useState();
   const [isLoading, setIsLoading] = useState(true);
 
+  // const character = data.find((e) => e.id === `${selectedCharacter}`);
+  console.log(data);
   useEffect(() => {
     const fetchData = async () => {
       try {
