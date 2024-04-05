@@ -3,12 +3,7 @@ import Person from "../components/Person";
 
 const Cards = ({ data, setSelectedCharacter }) => {
   return (
-    <div
-      className="card"
-      onClick={() => {
-        setSelectedCharacter(character.id);
-      }}
-    >
+    <div className="card">
       <div className="card-front">
         <img className="card-image" src={data.images.main} alt="" />
         <p>{data.name.first + " " + data.name.middle + " " + data.name.last}</p>

@@ -5,17 +5,24 @@ import axios from "axios";
 
 // Import Loader
 import Loader from "../components/Loader";
+import Pagination from "../components/Pagination";
 
+import Episode from "../components/Episode";
 const Episodes = () => {
-  const [data, setData] = useState();
+  const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
+
+  // Pagination
+  const [currentPage, setCurrentPage] = useState(1);
+  const [postsPerPage, setPostPerPage] = useState(5);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          "https://api.sampleapis.com/futurama/episodes"
+          `https://api.sampleapis.com/futurama/episodes`
         );
+
         setData(response.data);
         console.log(response.data);
         setIsLoading(false);
@@ -25,23 +32,24 @@ const Episodes = () => {
     };
     fetchData();
   }, []);
+
+  // pagination
+  const lastPostIndex = currentPage * postsPerPage;
+  const firstPostIndex = lastPostIndex - postsPerPage;
+  const currentPosts = data.slice(firstPostIndex, lastPostIndex);
+
   return isLoading ? (
     <Loader />
   ) : (
     <>
       <h1>Episodes</h1>
-      <div>
-        {data.map((episode) => {
-          return (
-            <div className="episodes" key={episode.title}>
-              <h2>Title : {episode.title}</h2>
-              <p>Writers : {episode.writers}</p>
-              <p>Original Air Date : {episode.originalAirDate}</p>
-              <p>Description : {episode.desc}</p>
-            </div>
-          );
-        })}
-      </div>
+      <Episode data={currentPosts} />
+      <Pagination
+        totalPosts={data.length}
+        postsPerPage={postsPerPage}
+        setCurrentPage={setCurrentPage}
+        currentPage={currentPage}
+      />
     </>
   );
 };
