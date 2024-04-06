@@ -1,9 +1,14 @@
 import "../assets/Styles/card.css";
-import Person from "../components/Person";
 
 const Cards = ({ data, setSelectedCharacter }) => {
   return (
-    <div className="card">
+    <div
+      className="card"
+      onClick={() => {
+        console.log(data.id);
+        setSelectedCharacter(data.id);
+      }}
+    >
       <div className="card-front">
         <img className="card-image" src={data.images.main} alt="" />
         <p>{data.name.first + " " + data.name.middle + " " + data.name.last}</p>
@@ -11,7 +16,10 @@ const Cards = ({ data, setSelectedCharacter }) => {
       <div className="card-back">
         <img className="card-image" src={data.images.main} alt="" />
         <div className="card-back-text">
-          {data.age ? <p>Age : {data.age}</p> : ""}
+          <p>
+            {data.name.first + " " + data.name.middle + " " + data.name.last}
+          </p>
+          {data.age ? <p>Age : {data.age} </p> : ""}
           {data.gender ? <p>Gender : {data.gender}</p> : ""}
           {data.species ? <p>Species :{data.species}</p> : ""}
           {data.occupation ? <p>{data.occupation}</p> : ""}
@@ -21,22 +29,3 @@ const Cards = ({ data, setSelectedCharacter }) => {
   );
 };
 export default Cards;
-
-// const Cards = ({ data, selectedCharacter, setSelectedCharacter }) => {
-//   return (
-//     <div>
-//       <p
-//         className="button"
-//         style={{
-//           textDecoration: data.id === selectedCharacter ? "underline" : null,
-//         }}
-//         onClick={() => {
-//           setSelectedCharacter(data.id);
-//         }}
-//       >
-//         {data.name.first}
-//       </p>
-//     </div>
-//   );
-// };
-// export default Cards;

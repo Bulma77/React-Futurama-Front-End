@@ -53,3 +53,43 @@
 .card:hover .card-back {
   transform: rotateY(0deg);
 }
+
+/* responsive */
+
+/* Tablette */
+@media all and (min-width: 768px) and (max-width: 1023px) {
+  .card {
+    width: 30%;
+  }
+  .card-back {
+    transform: none;
+  }
+  .card:hover .card-front {
+    transform: none;
+  }
+  .card:hover .card-back {
+    transform: none;
+  }
+  .card-front {
+    display: none;
+  }
+}
+
+/* Mobile */
+@media all and (max-width: 767px) {
+  .card {
+    width: 60%;
+  }
+  .card-back {
+    transform: none;
+  }
+  .card:hover .card-front {
+    transform: none;
+  }
+  .card:hover .card-back {
+    transform: none;
+  }
+  .card-front {
+    display: none;
+  }
+}

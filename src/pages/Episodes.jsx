@@ -49,6 +49,8 @@ const Episodes = () => {
         postsPerPage={postsPerPage}
         setCurrentPage={setCurrentPage}
         currentPage={currentPage}
+        firstPostIndex={firstPostIndex}
+        lastPostIndex={lastPostIndex}
       />
     </>
   );

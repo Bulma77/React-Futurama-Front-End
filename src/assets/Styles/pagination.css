@@ -1,6 +1,15 @@
+.pagination {
+  display: inline-blockflex;
+  align-items: center;
+  justify-content: center;
+}
+
 .pagination button.active {
   font-weight: 900;
   border-color: black;
   background: #2c927e;
   color: black;
+}
+.current-page {
+  display: flex;
 }

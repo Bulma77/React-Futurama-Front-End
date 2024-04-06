@@ -6,12 +6,16 @@ import axios from "axios";
 import Loader from "../components/Loader";
 import Card from "../components/Card";
 
+import Sayings from "../components/Sayings";
+
 const AllCharacters = () => {
-  const [data, setData] = useState();
+  const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
+  const [selectedCharacter, setSelectedCharacter] = useState(null);
+
   // const character = data.find((e) => e.id === `${selectedCharacter}`);
-  console.log(data);
+
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -31,11 +35,31 @@ const AllCharacters = () => {
     <Loader />
   ) : (
     <>
-      <div className="card-bloc">
-        {data.map((characters) => {
-          return <Card key={characters.id} data={characters} />;
-        })}
-      </div>
+      {selectedCharacter === null ? (
+        <div className="card-bloc">
+          {data.map((characters) => {
+            return (
+              <Card
+                key={characters.id}
+                data={characters}
+                setSelectedCharacter={setSelectedCharacter}
+              />
+            );
+          })}
+        </div>
+      ) : (
+        <div>
+          {data.map((characters) => {
+            return (
+              <Sayings
+                key={characters.id}
+                characters={characters}
+                selectedCharacter={selectedCharacter}
+              />
+            );
+          })}
+        </div>
+      )}
     </>
   );
 };

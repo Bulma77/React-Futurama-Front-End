@@ -35,7 +35,7 @@ const Info = () => {
               <p>{infos.synopsis}</p>
               <h2>Creators name :</h2>
               {infos.creators.map((creators) => {
-                return <p>{creators.name}</p>;
+                return <p key={creators.name}>{creators.name}</p>;
               })}
               <p>Production : {infos.yearsAired}</p>
             </div>
