@@ -14,8 +14,6 @@ const AllCharacters = () => {
 
   const [selectedCharacter, setSelectedCharacter] = useState(null);
 
-  // const character = data.find((e) => e.id === `${selectedCharacter}`);
-
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -35,31 +33,35 @@ const AllCharacters = () => {
     <Loader />
   ) : (
     <>
-      {selectedCharacter === null ? (
-        <div className="card-bloc">
-          {data.map((characters) => {
-            return (
-              <Card
-                key={characters.id}
-                data={characters}
-                setSelectedCharacter={setSelectedCharacter}
-              />
-            );
-          })}
-        </div>
-      ) : (
-        <div>
-          {data.map((characters) => {
-            return (
-              <Sayings
-                key={characters.id}
-                characters={characters}
-                selectedCharacter={selectedCharacter}
-              />
-            );
-          })}
-        </div>
-      )}
+      <h1>Charcaters</h1>
+
+      <div>
+        {selectedCharacter === null ? (
+          <div className="card-bloc">
+            {data.map((characters) => {
+              return (
+                <Card
+                  key={characters.id}
+                  data={characters}
+                  setSelectedCharacter={setSelectedCharacter}
+                />
+              );
+            })}
+          </div>
+        ) : (
+          <div>
+            {data.map((characters) => {
+              return (
+                <Sayings
+                  key={characters.id}
+                  characters={characters}
+                  selectedCharacter={selectedCharacter}
+                />
+              );
+            })}
+          </div>
+        )}
+      </div>
     </>
   );
 };

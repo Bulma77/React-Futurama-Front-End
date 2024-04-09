@@ -42,15 +42,13 @@ const Episodes = () => {
     <Loader />
   ) : (
     <>
-      <h1>Episodes</h1>
+      <h1>Liste des épisodes</h1>
       <Episode data={currentPosts} />
       <Pagination
-        totalPosts={data.length}
+        data={data}
         postsPerPage={postsPerPage}
         setCurrentPage={setCurrentPage}
         currentPage={currentPage}
-        firstPostIndex={firstPostIndex}
-        lastPostIndex={lastPostIndex}
       />
     </>
   );

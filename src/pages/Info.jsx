@@ -32,12 +32,13 @@ const Info = () => {
           console.log(infos);
           return (
             <div key={infos.id}>
-              <p>{infos.synopsis}</p>
-              <h2>Creators name :</h2>
+              <p className="synopsis">{infos.synopsis}</p>
+              <h2>Creators name </h2>
               {infos.creators.map((creators) => {
                 return <p key={creators.name}>{creators.name}</p>;
               })}
-              <p>Production : {infos.yearsAired}</p>
+              <h2>Production </h2>
+              <p>{infos.yearsAired} </p>
             </div>
           );
         })}

@@ -1,5 +1,5 @@
 .pagination {
-  display: inline-blockflex;
+  display: flex;
   align-items: center;
   justify-content: center;
 }
@@ -10,6 +10,7 @@
   background: #2c927e;
   color: black;
 }
-.current-page {
-  display: flex;
+button {
+  padding: 10px;
+  width: 2;
 }
