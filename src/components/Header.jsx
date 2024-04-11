@@ -1,18 +1,33 @@
 import logo from "../assets/logo.png";
-import { Link } from "react-router-dom";
+
+// Import bootstap
+import Container from "react-bootstrap/Container";
+import Nav from "react-bootstrap/Nav";
+import Navbar from "react-bootstrap/Navbar";
 
 const Header = () => {
   return (
-    <header className="header">
-      <Link to="/">
-        <img src={logo} alt="Logo Futurama" />
-      </Link>
-      <nav>
-        <Link to="/"> Home</Link>
-        <Link to="/info"> Info</Link>
-        <Link to="/characters">Characters</Link>
-        <Link to="/episodes">Episodes</Link>
-      </nav>
+    <header>
+      <Navbar
+        collapseOnSelect
+        expand="lg"
+        className="bg-body-tertiary  justify-content-between"
+      >
+        <Container>
+          <Navbar.Brand href="/">
+            <img src={logo} alt="Logo Futurama" height="40px" />
+          </Navbar.Brand>
+          <Navbar.Toggle aria-controls="responsive-navbar-nav " />
+          <Navbar.Collapse id="responsive-navbar-nav ">
+            <Nav className="ms-auto">
+              <Nav.Link href="/">Home</Nav.Link>
+              <Nav.Link href="/info">Info</Nav.Link>
+              <Nav.Link href="/characters">Characters</Nav.Link>
+              <Nav.Link href="/episodes">Episodes</Nav.Link>
+            </Nav>
+          </Navbar.Collapse>
+        </Container>
+      </Navbar>
     </header>
   );
 };

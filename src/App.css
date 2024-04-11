@@ -1,48 +1,27 @@
-html {
-  height: 100%;
+*,
+*::after,
+*::before {
+  /* margin: 0; */
   box-sizing: border-box;
 }
+/* html {
+  height: 100%;
+  height: 100vh;
+  font-size: 62.5%;
+} */
 body {
   max-width: 1200px;
   margin: 0 auto;
-  box-sizing: inherit;
+  height: 100vh;
+  /* box-sizing: inherit;
   position: relative;
-  min-height: 100%;
+min-height:100vh;
   padding-bottom: 2.74rem;
+  font-size: 1.6rem; */
 }
 
 .container {
   margin: 20px;
-}
-
-/* Header */
-
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 30px;
-}
-
-header img {
-  width: 100%;
-  box-sizing: border-box;
-  max-width: 100px;
-}
-nav {
-  display: flex;
-  justify-content: space-between;
-  gap: 20px;
-  padding: 10px;
-}
-
-header nav a {
-  text-decoration: none;
-  color: #09054f;
-  font-weight: bold;
-}
-header nav a:hover {
-  color: #2c927e;
 }
 
 .episodes {
@@ -52,15 +31,18 @@ header nav a:hover {
 .footer {
   padding: 20px;
   position: absolute;
-  right: 0;
-  left: 0;
+  right: 25%;
+  left: 25%;
   bottom: 0;
+  text-align: center;
 }
 
 h1 {
   font-size: 24px;
   padding: 20px 0;
   font-weight: bold;
+  /* margin-top: 100px; */
+  /* margin top pour decaler les éléments en dessous du header */
 }
 h2 {
   font-size: 20px;
