@@ -37,7 +37,7 @@ const AllCharacters = () => {
 
       <div>
         {selectedCharacter === null ? (
-          <div className="card-bloc">
+          <div className="cards-bloc">
             {data.map((characters) => {
               return (
                 <Card
