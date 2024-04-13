@@ -67,6 +67,7 @@ Pour Boostrap voir https://react-bootstrap.netlify.app/
 ### Bibliothèques
 
 - **React**
+- **React Router** : permet d'ajouter de la navigation dans un site en React.
 - **React Bootstrap**
 - **Vite.js** : compilateur (bundler) il permet de regrouper plusieurs fichiers source, tels que des fichiers JavaScript, CSS et d'autres types de fichiers, en un seul fichier optimisé pour la production.
 - **Axios** : Permet d'effectuer les requêtes HTTP.
@@ -74,6 +75,14 @@ Pour Boostrap voir https://react-bootstrap.netlify.app/
 ### Outils
 
 - **ESLint** : outil populaire utilisé dans le développement de logiciels pour assurer la qualité du code JavaScript
+
+## Liens
+
+- Pour visualiser le site : https://pricilliae-react-futurama-front-end.netlify.app/
+
+  déploiement du site sur Netlify (https://docs.netlify.com/)
+
+- Pour visualiser le code : https://github.com/pricilliaEDOU2/React-Futurama-Front-End.
 
 
 
