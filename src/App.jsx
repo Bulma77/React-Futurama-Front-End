@@ -1,12 +1,6 @@
 // Import router
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-// Fontawesome
-
-import { library } from "@fortawesome/fontawesome-svg-core";
-import { faBars, faX } from "@fortawesome/free-solid-svg-icons";
-library.add(faBars, faX);
-
 import "./App.css";
 
 // Pages

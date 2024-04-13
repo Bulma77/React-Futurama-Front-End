@@ -12,9 +12,9 @@ body {
   padding-bottom: 4rem;
 }
 
-.container {
+.wrapper {
   margin: 20px;
-  margin: 0 auto;
+  /* margin: 0 auto; */
 }
 .main-img {
   display: flex;
