@@ -2,25 +2,38 @@
 
 ## Résumé
 
-Création du Front-End React de Futurama en utilisant l'API : https://www.sampleapis.com/api-list/futurama.
+Création du Front-End responsive React avec Vite.js de Futurama en utilisant l'API : https://www.sampleapis.com/api-list/futurama.
 
 Méthode HTTP : GET
 
 L'utilsateur a la possibilité de naviguer entre les pages suivantes :
 
-- Une page home
+- Une page home (Affiche de la série Fururama).
   
-- Une page affichant les informations (Synopsis, noms des créateurs et dates de parution) : https://api.sampleapis.com/futurama/info
+- Une page infos affichant les informations (Synopsis, noms des créateurs et dates de parution) : https://api.sampleapis.com/futurama/info.
   
-- Une page affichant l'ensemble des personnages et les citations de chacun d'entre eux : https://api.sampleapis.com/futurama/characters
+- Une page characters affichant l'ensemble des personnages et les citations de chacun d'entre eux : https://api.sampleapis.com/futurama/characters.
 
   Présentation des personnages avec la possibilité d'avoir les citations d'un personnage en cliquant sur celui-ci.
   
-- Une page affichant les épisodes : https://api.sampleapis.com/futurama/episodes
+- Une page affichant les épisodes : https://api.sampleapis.com/futurama/episodes.
 
-  Liste des épisodes avec pagination afin de présenter 5 épisodes par pages (soit un total de 26 pages).
+  Liste des épisodes avec pagination afin de présenter 5 épisodes par pages (26 pages au total).
   
+## Pré-requis
 
+Environnement de développement intégré utilisé : Visual Studio Code
+
+### Commandes utilisées pour créer et lancer le projet
+
+- Utilisation du package **yarn** = npm install -g yarn. Attention, il faudra prendre soin  de toujours installer les dépendances avec la commande **yarn add** et non pas avec npm install afinn d'éviter des conflits.
+  
+- Initialisation du projet React avec vite.js :
+1. yarn create vite React-Futurama-Front-End --template react
+2. cd React-Futurama-Front-End
+3. yarn (installation des dépendances listées dans package.json)
+4. 
+- 
 
 
 
